@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .sidebar-item {
+        @apply flex flex-col items-center p-3 mx-4 text-sm text-gray-500 transition-colors duration-200 bg-gray-800 rounded-lg focus:outline-none hover:text-white hover:bg-gray-600;
+    }
+
+    .sidebar-item > p {
+        @apply hidden;
+    }
+
+    .sidebar-item.active {
+        @apply text-white bg-gray-600;
+    }
+
+    .content>h1 {
+        @apply text-4xl font-bold;
+    }
+
+    .content>hr {
+        @apply my-4;
+    }
+
+    .content>p {
+        @apply mb-4 text-lg text-justify;
+    }
+}
+
+.btn {
+    @apply px-4 py-2 font-bold rounded;
+}
+
+.btn-primary {
+    @apply text-white bg-blue-500;
+}
+
+.btn-primary:hover {
+    @apply bg-blue-700;
+}
+
+.btn-secondary {
+    @apply text-white bg-gray-500;
+}
+
+.btn-secondary:hover {
+    @apply bg-gray-700;
+}
