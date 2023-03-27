@@ -7,7 +7,7 @@
         @apply flex flex-col items-center p-3 mx-4 text-sm text-gray-500 transition-colors duration-200 bg-gray-800 rounded-lg focus:outline-none hover:text-white hover:bg-gray-600;
     }
 
-    .sidebar-item > p {
+    .sidebar-item>p {
         @apply hidden;
     }
 
@@ -28,22 +28,51 @@
     }
 }
 
-.btn {
-    @apply px-4 py-2 font-bold rounded;
+.card {
+    @apply flex flex-col min-w-0 border rounded;
 }
 
-.btn-primary {
-    @apply text-white bg-blue-500;
+.card-body {
+    @apply flex-grow p-5;
 }
 
-.btn-primary:hover {
-    @apply bg-blue-700;
+.card-title {
+    @apply mb-3 text-xl;
 }
 
-.btn-secondary {
-    @apply text-white bg-gray-500;
+.card-text {
+    @apply mt-0 mb-4;
 }
 
-.btn-secondary:hover {
-    @apply bg-gray-700;
+.list-group {
+    @apply flex flex-col pl-0 mb-0 list-decimal;
+}
+
+.list-group-item:first-child {
+    @apply rounded-t-sm;
+}
+
+.list-group-item {
+    @apply relative block px-5 py-3 -mb-px border;
+}
+
+.list-group-item:last-child {
+    @apply mb-0 rounded-b-sm;
+}
+
+.list-group-item.active {
+    @apply z-[2] border-blue-500 bg-blue-500 text-white;
+}
+
+/* Table */
+th, td {
+    @apply px-4 py-2 text-center;
+}
+
+.table>tbody>tr:nth-child(2n) {
+    @apply bg-blue-200;
+}
+
+.table>tbody>tr:nth-child(2n+1) {
+    @apply bg-blue-50;
 }
