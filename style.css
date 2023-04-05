@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .sidebar-item {
+        @apply flex flex-col items-center p-3 mx-4 text-sm text-gray-500 transition-colors duration-200 bg-gray-800 rounded-lg focus:outline-none hover:text-white hover:bg-gray-600;
+    }
+
+    .sidebar-item>p {
+        @apply hidden;
+    }
+
+    .sidebar-item.active {
+        @apply text-white bg-gray-600;
+    }
+
+    .content>h1 {
+        @apply text-2xl font-bold;
+    }
+
+    .content>hr {
+        @apply my-4;
+    }
+
+    .content>p {
+        @apply mb-4 text-base text-justify;
+    }
+}
+
+.card {
+    @apply flex flex-col min-w-0 border rounded;
+}
+
+.card-body {
+    @apply flex-grow p-5;
+}
+
+.card-title {
+    @apply mb-3 text-xl;
+}
+
+.card-text {
+    @apply mt-0 mb-4;
+}
+
+.list-group {
+    @apply flex flex-col pl-0 mb-0 list-decimal;
+}
+
+.list-group-item:first-child {
+    @apply rounded-t-sm;
+}
+
+.list-group-item {
+    @apply relative block px-5 py-3 -mb-px;
+}
+
+.list-group-item:last-child {
+    @apply mb-0 rounded-b-sm;
+}
+
+.list-group-item.active {
+    @apply z-[2] border-blue-500 bg-blue-500 text-white;
+}
+
+/* Table */
+th,
+td {
+    @apply px-4 py-2 text-center;
+}
+
+.table>tbody>tr:nth-child(2n) {
+    @apply bg-blue-200;
+}
+
+.table>tbody>tr:nth-child(2n+1) {
+    @apply bg-blue-50;
+}
+
+.hide {
+    display: none;
+}
+
+.accordion-header {
+    @apply p-2 bg-gray-800 text-gray-50 font-semibold hover:bg-gray-600;
+}
+
+.accordion-collapse {
+    @apply bg-gray-700 text-gray-50 font-normal;
+}
+
+.accordion-collapse > ul > li {
+    @apply hover:bg-gray-500;
+}

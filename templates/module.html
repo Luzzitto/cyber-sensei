@@ -1,0 +1,303 @@
+{% extends 'base.html' %}
+
+{% block title %}Modules - Cyber Sensei{% endblock %}
+
+{% block content %}
+
+<div class="flex w-screen h-screen overflow-hidden">
+    <div class="flex flex-col items-center w-16 h-screen py-4 space-y-8 bg-gray-900">
+        <a href="/" class="text-center">
+            <h1 class="text-2xl font-bold text-center line-through text-gray-50">CS</h1>
+        </a>
+        <a href="/" class="sidebar-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+            <p>Home</p>
+        </a>
+        <a href="/rank" class="sidebar-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+            <p>Rank</p>
+        </a>
+        <a href="/email" class="sidebar-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round"
+                    d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" />
+            </svg>
+            <p>Email</p>
+        </a>
+        <a href="/module" class="sidebar-item active">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
+            <p>Modules</p>
+        </a>
+        <hr class="w-16 border-t border-gray-100">
+        <a href="/settings" class="sidebar-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <p>Settings</p>
+        </a>
+        <a href="#" class="sidebar-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+            </svg>
+            <p>Logout</p>
+        </a>
+    </div>
+    <div class="flex flex-grow">
+        <div class="flex flex-col items-center w-1/2 h-screen bg-gray-500 overflow-scroll">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 1: Introduction to Cyber Hygiene
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Overview of Cybersecurity and Cyber Hygiene</li>
+                            <li class="list-group-item">Basic Cybersecurity Concepts (Confidentiality, Integrity,
+                                Availability, and Risk Management)</li>
+                            <li class="list-group-item">Common Cyber Threats and Attack Vectors</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 2: Password Security
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Importance of Strong Passwords</li>
+                            <li class="list-group-item">Creating and Managing Strong Passwords</li>
+                            <li class="list-group-item">Two-Factor Authentication</li>
+                            <li class="list-group-item">Avoiding Common Password Mistakes</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 3: Phishing Awareness
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Identifying and Reporting Phishing Emails</li>
+                            <li class="list-group-item">Avoiding Phishing Scams</li>
+                            <li class="list-group-item">Protecting Sensitive Information</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 4: Device Security
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Securing Desktop and Mobile Devices</li>
+                            <li class="list-group-item">Updating Software and Operating Systems</li>
+                            <li class="list-group-item">Installing Antivirus Software</li>
+                            <li class="list-group-item">Protecting Sensitive Data</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 5: Internet and Network Security
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Using Secure Wi-Fi and Public Wi-Fi Safely</li>
+                            <li class="list-group-item">Avoiding Malware and Ransomware Attacks</li>
+                            <li class="list-group-item">Firewall and Antivirus Protection</li>
+                            <li class="list-group-item">Creating and Using Virtual Private Networks (VPNs)</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 6: Social Engineering
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Types of Social Engineering Attacks (such as Baiting,
+                                Pretexting, and Spear Phishing)</li>
+                            <li class="list-group-item">Recognizing and Avoiding Social Engineering Attacks</li>
+                            <li class="list-group-item">Protecting Sensitive Information</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 7: Online Privacy
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Importance of Online Privacy</li>
+                            <li class="list-group-item">Privacy Settings on Social Media and Other Online Accounts</li>
+                            <li class="list-group-item">Browsing Safely and Anonymously</li>
+                            <li class="list-group-item">Avoiding Identity Theft</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 8: Safe Online Shopping and Banking
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Choosing Secure Online Retailers and Banks</li>
+                            <li class="list-group-item">Protecting Credit Card and Other Financial Information</li>
+                            <li class="list-group-item">Avoiding Online Fraud and Scams</li>
+                            <li class="list-group-item">Recognizing and Reporting Suspicious Activity</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 9: Incident Response
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Identifying and Responding to Cybersecurity Incidents</li>
+                            <li class="list-group-item">Developing an Incident Response Plan</li>
+                            <li class="list-group-item">Reporting Security Incidents and Working with Law Enforcement
+                            </li>
+                            <li class="list-group-item">Conducting a Post-Incident Review and Assessment</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 10: Cybersecurity Laws and Regulations
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Overview of Relevant Cybersecurity Laws and Regulations</li>
+                            <li class="list-group-item">Data Protection and Privacy Laws</li>
+                            <li class="list-group-item">Understanding and Complying with Industry Standards and Best
+                                Practices</li>
+                            <li class="list-group-item">Cybersecurity Insurance</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" onclick="toggleSublist(event)">
+                            Module 11: Cybersecurity Management
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse hide">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Creating a Cybersecurity Policy</li>
+                            <li class="list-group-item">Cybersecurity Awareness and Training for Employees and Students
+                            </li>
+                            <li class="list-group-item">Conducting Regular Security Audits and Assessments</li>
+                            <li class="list-group-item">Developing a Business Continuity and Disaster Recovery Plan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-grow overflow-auto bg-gray-50">
+            <div class="w-1/2 py-12 mx-auto content">
+                <h1>Overview of Cybersecurity and Cyber Hygiene</h1>
+
+                <hr>
+
+                <p>Cybersecurity means keeping computers, phones, and other electronic devices safe from bad people who
+                    want to steal information or do damage. Cybersecurity is important because we store a lot of
+                    personal information on our devices, like our passwords, photos, and messages, and we don't want
+                    anyone else to have access to them.</p>
+
+                <p>Cyber hygiene is like taking a shower for our electronic devices. Just like we wash our hands and
+                    take showers to stay clean and healthy, we need to take good care of our devices to keep them safe
+                    and healthy too. Cyber hygiene means doing things like setting strong passwords, not sharing
+                    personal information with strangers online, and being careful about what we click on and download.
+                </p>
+
+                <p>The goal of cyber hygiene is to make sure our devices and information are safe from bad people. By
+                    practicing good cyber hygiene, we can reduce the chances of someone trying to steal our information
+                    or do harm to our devices.</p>
+
+                <hr>
+
+                <div class="flex items-center justify-between">
+                    <button class="btn btn-secondary">Prev</button>
+                    <button class="btn btn-primary">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSublist(event) {
+  // Get the parent accordion item of the clicked button
+  const accordionItem = event.target.closest('.accordion-item');
+  if (!accordionItem) return;
+  
+  // Toggle the visibility of the sublist
+  const sublist = accordionItem.querySelector('.accordion-collapse');
+  sublist.classList.toggle('hide');
+
+  // Toggle the aria-expanded attribute of the button
+  const isExpanded = sublist.classList.contains('hide') ? 'false' : 'true';
+  event.target.setAttribute('aria-expanded', isExpanded);
+}
+
+</script>
+{% endblock %}

@@ -1,18 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./**/*.{php,js,html}",
-    "./*.{php,js,html}",
+    "./templates/**/*.{html,js}",
+    "./**/*.{html,js}"
   ],
   theme: {
-    extend: {
-      colors: {
-        primary: "#202225",
-        secondary: "#5865f2",
-      }
-    },
+    extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms'),
+    require('@tailwindcss/forms')
   ],
 }
+
